@@ -1,0 +1,50 @@
+.custom-form {
+  .form-item {
+    margin-bottom: 12px;
+
+    .field {
+      display: flex;
+      align-items: center;
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0;
+      flex: 0 auto;
+    }
+
+    .require-mark::before {
+      display: inline-block;
+      margin-right: 4px;
+      color: #ff4d4f;
+      font-size: 14px;
+      font-family: SimSun, sans-serif;
+      line-height: 1;
+      content: "*";
+    }
+
+    .p-field {
+      margin: 0px !important;
+      margin-bottom: 0px !important;
+      flex: 1;
+
+      * {
+        line-height: 24px;
+        font-size: 16px;
+      }
+
+      i {
+        line-height: 14px;
+      }
+    }
+
+    .p-password {
+      display: block;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

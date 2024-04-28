@@ -1,0 +1,17 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+
+  .header,
+  .page-header,
+  .sider,
+  .footer {
+    flex: 0 0 auto;
+  }
+
+  .content {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}

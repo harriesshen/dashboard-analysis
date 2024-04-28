@@ -1,0 +1,33 @@
+@import "../../../mixin/color.scss";
+#FeatureGender {
+  height: 100%;
+  overflow: auto;
+  #FeatureGenderEChart {
+    width: 100%;
+    height: 550px;
+  }
+  @media screen and (max-width: 1024px) {
+    .mantine-Grid-root{
+      height: 55vh;
+      overflow-y: auto;
+    }
+    #FeatureGenderEChart{
+      height: 400px;
+    }
+  }
+  #FeatureGenderTable{
+    height: 600px;
+    overflow-y: auto;
+  }
+  @media screen and (max-height: 880px) {
+    #FeatureGenderTable{
+      height: 500px;
+    }
+  }
+  .title {
+    color: $Primary-Color;
+  }
+  h2{
+    color: $Primary-Color;
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../../mixin/color.scss";
+#Feature {
+  height: 100%;
+  .page{
+    height: calc(100% - 6rem);
+  }
+  .title {
+    color: $Primary-Color;
+  }
+  .mantine-nsdj {
+    margin: 0px;
+  }
+  .tabs {
+    height: 100%;
+    .mantine-u5qhah {
+      background-color: $Primary-Color;
+      color: $Light;
+    }
+    margin-bottom: 1rem;
+    .mantine-SegmentedControl-active{
+      background-color: $Primary-Color;
+    }
+    .mantine-SegmentedControl-labelActive{
+      color: #ffffff;
+    }
+    .mantine-Select-item{
+      &[data-selected]{
+        &{
+          background-color: $Primary-Light;
+        }
+      }
+    }
+  }
+  h2 {
+    color: $Primary-Color;
+  }
+  .searchForm {
+    margin-top: 10px;
+    padding: 10px 30px;
+    border: 1px solid grey;
+    background-color: color-mix(in srgb, var(--mixin-color, #ff8346) 5%, #fff);
+    display: flex;
+    justify-content: space-between;
+  }
+}

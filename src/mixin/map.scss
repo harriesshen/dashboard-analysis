@@ -1,0 +1,40 @@
+@import "./color.scss";
+.Map-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  .titleLabel {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    .title {
+      font-size: 32px;
+      color: $Primary-Color;
+      margin-bottom: 16px;
+    }
+    .mantine-Chip-label {
+      color: $Primary-Color;
+      font-weight: 500;
+      border: 1px solid $Primary-Color;
+    }
+    .mantine-Chip-checked {
+      color: white;
+      background-color: $Primary-Color;
+    }
+    .mantine-Chip-iconWrapper {
+      color: white;
+    }
+  }
+
+  .map {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    border-radius: 8px;
+  }
+}
