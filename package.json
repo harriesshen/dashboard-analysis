@@ -2,6 +2,7 @@
   "name": "web",
   "version": "0.1.0",
   "license": "MIT",
+  "homepage": "https://harriesshen.github.io/dashboard-analysis",
   "resolutions": {
     "react-error-overlay": "6.0.9"
   },
@@ -31,6 +32,7 @@
     "echarts-for-react": "^3.0.2",
     "echarts-gl": "^2.0.9",
     "formik": "^2.2.9",
+    "gh-pages": "^6.1.1",
     "history": "^4.10.1",
     "html-react-parser": "^1.4.0",
     "leaflet": "1.9.3",
@@ -91,9 +93,11 @@
   },
   "scripts": {
     "start": "cross-env react-scripts start",
-    "build": "cross-env PUBLIC_URL=https://test.taichung.accident.newfields.com.tw/SystemFile react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "lint": "stylelint src/**/**/**/**/**/**/*.js",
     "lint:fix": "stylelint src/**/**/**/**/**/**/*.js --fix"
   },
