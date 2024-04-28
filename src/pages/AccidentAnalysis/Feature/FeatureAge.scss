@@ -1,0 +1,34 @@
+@import "../../../mixin/color.scss";
+#FeatureAge {
+
+  #FeatureAgeEChart {
+    width: 100%;
+    height: 550px;
+  }
+  @media screen and (max-width: 1024px) {
+    .mantine-Grid-root{
+      height: 55vh;
+      overflow-y: auto;
+    }
+    #FeatureAgeEChart{
+      height: 400px;
+    }
+  }
+  #FeatureAgeTable{
+    height: 600px;
+    overflow-y: auto;
+  }
+  @media screen and (max-height: 880px) {
+    #FeatureAgeTable{
+      height: 500px;
+    }
+  }
+  .title {
+    color: $Primary-Color;
+  }
+  h2{
+    color: $Primary-Color;
+    margin-bottom: 0;
+  }
+
+}

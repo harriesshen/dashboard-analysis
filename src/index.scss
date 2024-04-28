@@ -1,0 +1,289 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import "./mixin/margin.scss";
+@import "./mixin/padding.scss";
+@import "./mixin/layout.scss";
+@import "./mixin/size.scss";
+@import "./mixin/card.scss";
+@import "./mixin/custom-form.scss";
+@import "~leaflet/dist/leaflet.css";
+@import "~react-leaflet-markercluster/dist/styles.min.css";
+@import "./mixin/color.scss";
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif !important;
+}
+
+#root,
+html,
+body {
+  height: 100%;
+}
+
+.hiddenText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.leaflet-popup-tip,
+.leaflet-tooltip {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.leaflet-tooltip::before {
+  border-top-color: rgba(0, 0, 0, 0.7);
+}
+
+.leaflet-popup-close-button {
+  top: 6px !important;
+  right: 6px !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 16px;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-tooltip-pane {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+
+  * {
+    color: #fff;
+  }
+}
+
+.leaflet-bar {
+  border: 0px;
+
+  a,
+  a.leaflet-disabled,
+  a:hover,
+  a.leaflet-disabled:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 0px;
+    color: #fff;
+  }
+}
+
+// jimmy
+.toolBax {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-top-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  color: #000;
+}
+
+.toolBax * {
+  color: #000;
+}
+
+.toolBaxred {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-top-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  color: #f00;
+}
+
+.toolBaxred * {
+  color: #f00;
+}
+
+.infobox {
+  padding: 20px 10px;
+  color: #fff;
+}
+
+.infobox .title {
+  font-size: 18px !important;
+  color: #fffa93 !important;
+}
+
+.infobox .title #CaseNo {
+  font-size: 18px !important;
+  color: #fffa93 !important;
+}
+
+.infobox hr {
+  opacity: 0.5;
+}
+
+.infobox .page {
+  text-align: right;
+}
+
+.infobox .page a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.prev-next-button {
+  background: #fff;
+}
+
+.prev-next-button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 26px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.prev-next-button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.page input[type="text"] {
+  height: 20px;
+  font-size: 16px;
+  text-align: center;
+  border: 0;
+  border-radius: 3px;
+}
+
+.infobox ul {
+  padding: 0 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.infobox li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  list-style: none;
+  padding: 6px 0;
+  /*不要分左右邊就刪掉以下三行*/
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.infobox li:last-child {
+  border: 0;
+}
+
+.infobox .Name {
+  color: #aadff0;
+  text-align: left;
+  word-break: keep-all;
+}
+
+.leaflet-pane
+  .leaflet-popup-pane
+  .leaflet-popup
+  .leaflet-zoom-animated
+  .leaflet-popup-content-wrapper
+  .leaflet-popup-content
+  .infobox
+  .title
+  * {
+  color: #fffa93;
+}
+
+.infoboxMap {
+  padding: 20px 10px;
+  color: #000;
+}
+
+.infoboxMap .title {
+  font-size: 18px !important;
+  color: #fffa93 !important;
+}
+
+.infoboxMap .title #CaseNo {
+  font-size: 18px !important;
+  color: #fffa93 !important;
+}
+
+.infoboxMap hr {
+  opacity: 0.5;
+}
+
+.infoboxMap .page {
+  text-align: right;
+}
+
+.infoboxMap .page a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.infoboxMap ul {
+  padding: 0 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: rgba(135, 132, 132, 0.232);
+}
+
+.infoboxMap li {
+  list-style: none;
+  padding: 6px 0;
+  /*不要分左右邊就刪掉以下三行*/
+  display: flex;
+  text-align: left;
+
+  border-bottom: 1px solid rgba(225, 47, 47, 0.353);
+}
+
+.infoboxMap li:last-child {
+  list-style: none;
+  padding: 6px 0;
+  /*不要分左右邊就刪掉以下三行*/
+  display: flex;
+  text-align: left;
+  border-bottom: 1px solid rgba(225, 47, 47, 0.353);
+}
+
+.infoboxMap .Name {
+  color: #aadff0;
+  text-align: left;
+  word-break: keep-all;
+}
+
+.openGmapcss {
+  border: 0;
+  background-color: $BgLight;
+  color: #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+// jimmy 20230223
+.leaflet-top .leaflet-control {
+  margin-top: 50px;
+}
+
+.leaflet-control-layers leaflet-control {
+  background-color: #2da0e2;
+  background-size: 20px 20px;
+}
+
+// Mantine setting
+
+.mantine-Button-root{
+  background-color: $Primary-Color;
+  color: #fff;
+}
+
+.mantine-Button-root:hover{
+  background-color: #577275;
+  color: #fff;
+}

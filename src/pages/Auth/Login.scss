@@ -1,0 +1,65 @@
+@import "../../mixin/color.scss";
+
+#login {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient((#5f828e, #6d9196));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    li{
+      position: absolute;
+      display: block;
+      list-style: none;
+      animation: animate 25s linear infinite;
+    }
+  }
+  .form-card {
+    width: 720px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .text {
+      font-size: 40px;
+      color: $Primary-Color;
+    }
+    img {
+      height: 120px;
+    }
+  }
+}
+
+@keyframes animate{
+  0%{
+    opacity: 1;
+    border-radius: 0;
+  }
+  100%{
+    transform: translateY(-1200px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+@for $i from 1 through 30{
+  li:nth-child(#{$i}){
+    $Size: random()*200px + 50px;
+    width: $Size;
+    height: $Size;
+    left: random()*120%-10%;
+    bottom: random()*-100%-30;
+    background: rgba(white, 0.5);
+    animation-delay: $i;
+    animation-duration: random()*5s;
+    transform: translateY(0) rotate(random()*360deg);
+  }
+
+}

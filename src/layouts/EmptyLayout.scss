@@ -1,0 +1,14 @@
+@import "../mixin/color.scss";
+#EmptyLayout {
+  // height: calc(100vh - 92px);
+  .title {
+    position: sticky;
+    background-color: $BgLight;
+    // backdrop-filter: blur(3px);
+    top: 0px;
+    z-index: 50;
+    font-size: 2rem;
+    color: $Primary-Color;
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,229 @@
+@import "../mixin/color.scss";
+#Layout {
+  min-height: 100vh;
+  #layoutMiddle {
+    display: none;
+  }
+  .menu-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 15px;
+    display: block;
+  }
+  .menu-title-print {
+    opacity: 1;
+    height: 29px;
+    transition-property: all;
+    transition-duration: 0.5s;
+  }
+  .menu-title-hide {
+    opacity: 0;
+    height: 0;
+    transition-property: all;
+    transition-duration: 0.5s;
+  }
+  .content {
+    background-color: $BgLight;
+  }
+  .sider {
+    // padding-top: 60px;
+    flex: 0 0 300px;
+    transition-duration: 0.5s;
+    box-shadow:
+      5px 0px 5px $Sidebar-Dark,
+      -5px 0px 5px $Sidebar-Dark;
+    z-index: 70;
+  }
+
+  .sider-closed {
+    padding-top: 60px;
+    flex: 0 0 70px;
+    transition-duration: 0.5s;
+    box-shadow:
+      5px 0px 5px $Sidebar-Dark,
+      -5px 0px 5px $Sidebar-Dark;
+    z-index: 70;
+    .mantine-Accordion-icon {
+      margin-right: 0px;
+    }
+    .mantine-Accordion-chevron {
+      display: none;
+    }
+    .mantine-1ags9m1 {
+      display: none;
+    }
+  }
+
+  .siderIcon {
+    width: 30px;
+    margin-left: 10px;
+    font-size: 28px;
+  }
+
+  .siderbar-border {
+    border-bottom: 1px solid $Sidebar-Dark !important;
+  }
+
+  .zoom-button {
+    width: 25px;
+    height: 40px;
+    font-size: 24px;
+    color: $Light;
+    border-radius: 4px 0px 0px 4px;
+    position: absolute;
+    top: 80px;
+    left: 275px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a0a0a0;
+    transition-property: left;
+    transition-duration: 0.5s;
+  }
+
+  .zoom-button-right {
+    width: 25px;
+    height: 40px;
+    font-size: 24px;
+    color: $Light;
+    border-radius: 0px 4px 4px 0px;
+    position: absolute;
+    top: 80px;
+    right: 275px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a0a0a0;
+    transition-property: right;
+    transition-duration: 0.5s;
+  }
+
+  .zoom-button:hover {
+    background-color: #c0c0c0;
+  }
+
+  .zoom-button-closed {
+    left: 70px;
+    border-radius: 0px 4px 4px 0px;
+    transition-property: left;
+    transition-duration: 0.5s;
+  }
+
+  .zoom-button-closed-right {
+    right: 70px;
+    border-radius: 4px 0px 0px 4px;
+    transition-property: right;
+    transition-duration: 0.5s;
+  }
+
+  .content {
+    // padding-top: 60px;
+  }
+
+  .children {
+    padding: 24px;
+    .title {
+      position: sticky;
+      background-color: $BgLight;
+      // backdrop-filter: blur(3px);
+      top: 0px;
+      z-index: 50;
+      font-size: 2rem;
+      color: $Primary-Color;
+      margin-bottom: 16px;
+    }
+  }
+  .top-menu-children {
+    height: calc(100vh - 102px);
+  }
+  .left-right-menu-children {
+    height: calc(100vh - 60px);
+  }
+  .top-sidebar {
+    height: 102px;
+    padding-top: 60px;
+  }
+  .menu-top-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.header {
+  // position: fixed;
+  // top: 0px;
+  // left: 0px;
+  // z-index: 100;
+  background-color: $Primary-Color;
+  border-bottom: none;
+  box-shadow: 0px 3px 3px $Sidebar-Dark;
+  .header-content {
+    height: 100%;
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .left-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: bold;
+    }
+    .left-block {
+      .marqueeTr {
+        display: flex;
+        height: 38px;
+        align-items: center;
+        background-color: $Light;
+        border-radius: 4px;
+        .marqueeLeftTd {
+          padding: 7px;
+        }
+        .marqueeRightTd {
+          width: 270px;
+          padding: 4px;
+          .marqueeItem {
+            width: 250px;
+            height: 20px;
+            font-weight: 400;
+            font-size: 1rem;
+            color: #505050;
+          }
+          .marquee-container.horizontal::before {
+            background: linear-gradient(90deg, $Light 0%, rgba($Light, 0.6) 80%, rgba($Light, 0) 100%);
+          }
+          .marquee-container.horizontal::after {
+            background: linear-gradient(270deg, $Light 0%, rgba($Light, 0.6) 80%, rgba($Light, 0) 100%);
+          }
+        }
+      }
+      .imgBlock {
+        height: 45px;
+        width: 45px;
+        background-color: #22b14c;
+        border-radius: 100%;
+        overflow: hidden;
+        img {
+          height: 46px;
+          position: relative;
+          top: -1px;
+          left: 2.7px;
+          // margin-left: 3px;
+        }
+      }
+    }
+    .right-block {
+      display: flex;
+      align-items: center;
+      text-align: right;
+      gap: 6px;
+      .button {
+        color: $Light;
+        background-color: inherit;
+        width: auto;
+      }
+    }
+  }
+}

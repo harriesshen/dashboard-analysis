@@ -1,0 +1,63 @@
+@import "../../mixin/color.scss";
+.tableSize {
+  overflow: auto;
+  .CRUDTable-outer {
+    .CRUDTable {
+      table-layout: fixed;
+      width: 100%;
+      .inside {
+        width: 100%;
+      }
+
+      tr:first-child th {
+        position: sticky;
+        z-index: 1;
+        top: 0;
+        background-color: $Primary-Color;
+        color: $Light;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      tr:nth-child(2) th {
+        position: sticky;
+        top: 40px;
+        background-color: $Primary-Color;
+        color: $Light;
+      }
+      tr:nth-child(odd) {
+        // background-color: mix($Primary-Color, $Light, 15%);
+        background-color: color-mix(in srgb, $Primary-Color 10%, $Light);
+      }
+      tr:nth-child(even) {
+        // background-color: mix($Primary-Color, $Light, 10%);
+        background-color: color-mix(in srgb, $Primary-Color 5%, $Light);
+      }
+      tr {
+        th,
+        td {
+          border-left: 1px;
+          border-right: 1px;
+          border-style: solid;
+          border-color: $BgLight;
+        }
+        th {
+          box-shadow: inset 0px -1px 0px $BgLight;
+        }
+        td {
+          border-top: 3px solid $BgLight;
+          color: $Primary-Color;
+        }
+      }
+      .icon-button {
+        padding: 1px;
+        width: 35px;
+        height: 35px;
+        margin: 0px 2px;
+      }
+      .mantine-p6t95t::before {
+        background-color: $Primary-Color;
+      }
+    }
+  }
+}

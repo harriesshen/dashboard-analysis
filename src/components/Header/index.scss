@@ -1,0 +1,129 @@
+#header {
+  height: 70px;
+  background: rgb(43, 182, 115);
+  padding: 0px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    color: yellow;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .logo {
+      height: 32px;
+    }
+  }
+
+  .menu {
+    a {
+      color: inherit; /* 移除超連結顏色 */
+      text-decoration: none; /* 移除超連結底線 */
+    }
+
+    .icon-btn {
+      padding: 6px 12px;
+      border-radius: 0.3rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+
+      .icon {
+        font-size: 24px;
+      }
+    }
+
+    .icon-btn:hover {
+      border-color: rgba(255, 255, 255, 0.5);
+      .icon {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .flex-nav {
+      height: 70px;
+      list-style: none;
+      display: flex;
+      gap: 0.2rem;
+      margin: 0;
+
+      li {
+        line-height: 70px;
+        cursor: pointer;
+
+        a {
+          padding: 0.5rem 0.3rem;
+          transition: all 0.5s ease;
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: white;
+        }
+
+        a.active {
+          background-color: #f00;
+        }
+
+        a:hover {
+          background-color: rgba(255, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+}
+
+#mobile-menu {
+  background: rgb(43, 182, 115);
+  height: 0px;
+  border-top: 1px solid rgba(30, 30, 30, 0.3);
+  transition: all 0.5s ease-in-out;
+
+  .flex-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin: 0;
+    padding: 0.5rem 0px;
+
+    li {
+      padding: 0.5rem 0.75rem;
+      line-height: 24px;
+      cursor: pointer;
+
+      a {
+        transition: all 0.5s ease;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: white;
+      }
+    }
+
+    li.active {
+      background: rgb(29, 119, 76);
+    }
+  }
+}
+
+#mobile-menu.inactive {
+  height: 0px;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+#mobile-menu.active {
+  height: 410px;
+}
+
+@media (max-width: 400px) {
+  #header {
+    .title {
+      font-size: 1.2rem;
+    }
+  }
+}

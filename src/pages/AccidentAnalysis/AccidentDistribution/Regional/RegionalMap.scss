@@ -1,0 +1,81 @@
+@import "../../../../mixin/color.scss";
+#RegionalMap {
+  height: 100%;
+  overflow: auto;
+
+  .toolBax {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    color: #000;
+  }
+
+  .toolBax * {
+    color: #000;
+  }
+
+  .custom-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000dff;
+    color: #fff;
+    border-radius: 16px; /* 圓形 */
+  }
+
+  //事故點位Dropdown顏色控制
+  .mantine-Select-item,.mantine-Select-input{
+    color: #000;
+  }
+}
+.mantine-Dialog-root{
+  .caretBtn{
+    background-color: #adabab28;
+    margin: 0px 5px;
+    border: 1px #fff solid;
+    cursor: pointer;
+  }
+  .popupHeader{
+    padding-top: 10px;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+    border-bottom: 1px #fff solid;
+  }
+  .mantine-Select-input{
+    width: 60px;
+  }
+  .mantine-Select-item{
+    &[data-selected]{
+      &{
+        background-color: $Primary-Light;
+      }
+    }
+  }
+  .feature{
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-top: 10px;
+    max-height: 300px;
+    height: 300px;
+    align-items: start;
+
+    .featureTable{
+      thead tr th {
+        position:sticky;
+        top:0; /* 列首永遠固定於上 */
+        z-index: 2;
+        background-color: #acc4c7;
+        color: #fff;
+        text-align: center;
+      }
+      tbody tr td{
+        background-color: #fff;
+        text-align: center;
+        &:nth-child(2){
+          text-align: start;
+        }
+      }
+    }
+  }
+}

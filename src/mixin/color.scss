@@ -1,0 +1,30 @@
+$Primary-Color: var(--mixin-color, #6d9196);
+$Primary-Light: color-mix(in srgb, $Primary-Color 95%, white);
+$Primary-Dark: color-mix(in srgb, $Primary-Color 95%, black);
+$Primary-Darker: color-mix(in srgb, $Primary-Color 75%, black);
+$Light: #fff;
+$BgLight: #fff;
+$Sidebar: #eaeaea;
+$Sidebar-Dark: darken($Sidebar, 15%);
+
+.bg-primary {
+  background-color: $Primary-Color;
+}
+.bg-primary:hover {
+  background-color: $Primary-Dark;
+}
+.bg-sidebar {
+  background-color: $Sidebar;
+}
+.font-primary {
+  color: $Primary-Color;
+}
+.font-gray {
+  color: #707070;
+}
+.font-light {
+  color: $Light;
+}
+.un-menu:hover {
+  color: $Primary-Color;
+}
